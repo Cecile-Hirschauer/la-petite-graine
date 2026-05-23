@@ -1,6 +1,7 @@
 {
   "name": "@lpg/shared",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "exports":{
     ".": {
@@ -8,7 +9,6 @@
       "import": "./dist/index.js"
     }
   },
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
