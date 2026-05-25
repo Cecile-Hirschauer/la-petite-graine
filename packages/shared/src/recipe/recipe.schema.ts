@@ -7,8 +7,6 @@ const recipeIngredientSchema = z.object({
   unit: z.string().min(1),
 });
 
-const recipeStepSchema = z.array(z.string().min(1));
-
 export const recipeSchema = z.object({
   title: z.string().min(1),
   description: z.string().optional(),
@@ -20,5 +18,5 @@ export const recipeSchema = z.object({
   preparationTime: z.number().int().positive(),
   cookingTime: z.number().int().positive(),
   servings: z.number().int().positive(),
-  steps: z.array(recipeStepSchema).min(1),
+  steps: z.array(z.string().min(1)),
 });
