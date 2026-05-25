@@ -10,7 +10,7 @@ const recipeIngredientSchema = z.object({
 const recipeStepSchema = z.array(z.string().min(1));
 
 export const recipeSchema = z.object({
-  name: z.string().min(1),
+  title: z.string().min(1),
   description: z.string().optional(),
   imageUrl: z.url().optional(),
   seasons: z.array(seasonEnum).min(1),
