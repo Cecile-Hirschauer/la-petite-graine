@@ -3,8 +3,8 @@
   "compilerOptions": {
     "outDir": "./dist",
     "rootDir": "./src",
-    "module": "ESNext",
-    "moduleResolution": "node16",
+    "module": "node18",
+    "moduleResolution": "nodenext",
   },
   "references": [{ "path": "../shared" }],
   "include": ["src/**/*"]
