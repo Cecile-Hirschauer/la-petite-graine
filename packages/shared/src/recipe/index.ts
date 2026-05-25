@@ -1,2 +1,2 @@
 export { recipeIngredientSchema, recipeSchema } from './recipe.schema';
-export type { Recipe } from './recipe.types';
+export type { Recipe, RecipeIngredient } from './recipe.types';
