@@ -3,20 +3,17 @@ import { seasonEnum } from '../common';
 
 const recipeIngredientSchema = z.object({
   ingredientId: z.string().min(1),
-  quantity: z.union([z.number().positive(), z.string().min(1)]),
+  quantity: z.string().min(1),
   unit: z.string().min(1),
 });
 
-const recipeStepSchema = z.object({
-  stepNumber: z.number().int().positive(),
-  description: z.string().min(1),
-});
+const recipeStepSchema = z.array(z.string().min(1));
 
 export const recipeSchema = z.object({
   name: z.string().min(1),
   description: z.string().optional(),
   imageUrl: z.url().optional(),
-  season: z.array(seasonEnum).min(1),
+  seasons: z.array(seasonEnum).min(1),
   category: z.string().min(1),
   difficulty: z.enum(['easy', 'medium', 'hard']),
   ingredients: z.array(recipeIngredientSchema).min(1),
@@ -24,6 +21,4 @@ export const recipeSchema = z.object({
   cookingTime: z.number().int().positive(),
   servings: z.number().int().positive(),
   steps: z.array(recipeStepSchema).min(1),
-  createdAt: z.date(),
-  updatedAt: z.date(),
 });
