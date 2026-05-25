@@ -1,6 +1,5 @@
 import { z } from 'zod';
-
-const SEASONS = ['summer', 'winter', 'spring', 'autumn'] as const;
+import { SEASONS } from '../common/season.schema';
 
 export const ingredientSchema = z.object({
   name: z.string().min(1),
