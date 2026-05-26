@@ -5,7 +5,8 @@
   "tailwind": {
     "config": "",
     "css": "",
-    "baseColor": "neutral"
+    "baseColor": "neutral",
+    "cssVariables": true
   },
   "framework": "vite",
   "aliases": {

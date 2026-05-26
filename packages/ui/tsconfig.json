@@ -2,11 +2,12 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "composite": true,
+    "baseUrl": ".",
     "rootDir": "./src",
     "jsx": "preserve",
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "paths": {
-      "@/": ["./src/*"]
+      "@/*": ["./src/*"]
     }
   },
   "references": [
