@@ -4,7 +4,10 @@
     "composite": true,
     "rootDir": "./src",
     "jsx": "preserve",
-    "lib": ["ES2022", "DOM", "DOM.Iterable"]
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "paths": {
+      "@/": ["./src/*"]
+    }
   },
   "references": [
     { "path": "../shared" }
